@@ -1,0 +1,660 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    padding: 0 8%;
+    background: rgba(255, 255, 255, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* LOGO */
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+    color: #111;
+    cursor: pointer;
+}
+
+/* NAV LINKS */
+.projectCon {
+    display: flex;
+    gap: 30px;
+}
+
+.project,
+.contact {
+    font-size: 15px;
+    font-weight: 500;
+    color: #111;
+    cursor: pointer;
+    position: relative;
+}
+
+/* UNDERLINE HOVER */
+.project::after,
+.contact::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background: #ffbf69;
+    transition: width 0.3s ease;
+}
+
+.project:hover::after,
+.contact:hover::after {
+    width: 100%;
+}
+
+/* ===== HERO SECTION ===== */
+section {
+    margin-top: 70px;
+    /* navbar offset */
+}
+
+.bgimg {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 70px);
+    overflow: hidden;
+}
+
+/* IMAGE */
+.bgimg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* DARK OVERLAY */
+.bgimg::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+/* CENTER TEXT */
+.center-text {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 10%;
+    color: #fff;
+}
+
+/* TEXT STYLES */
+.summery {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.goal {
+    font-size: 18px;
+    max-width: 650px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #e5e5e5;
+}
+
+/* BUTTON */
+.viewproject {
+    padding: 14px 36px;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    border-radius: 30px;
+    background: #ffbf69;
+    color: #111;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.viewproject:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .summery {
+        font-size: 32px;
+    }
+
+    .goal {
+        font-size: 16px;
+    }
+
+    .navbar {
+        padding: 0 6%;
+    }
+}
+
+@media (max-width: 480px) {
+    .summery {
+        font-size: 26px;
+    }
+
+    .projectCon {
+        gap: 20px;
+    }
+}
+
+.goal {
+    font-size: 22px;
+    opacity: 0.9;
+    margin: 0px 0px 48px;
+}
+
+.ourwork {
+    min-height: 100vh;
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.whatwedo {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 700;
+    color: #1A1A1A;
+
+    margin-bottom: 70px;
+}
+
+.workbox {
+    width: 90%;
+    max-width: 1400px;
+    min-height: 70vh;
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+
+    padding: 60px;
+
+    border-radius: 40px;
+    background-color: #f0ebd8;
+}
+
+.codelaptop img {
+    width: 600px;
+    max-width: 100%;
+    height: auto;
+
+    border-radius: 30px;
+}
+
+.worktext {
+    font-size: 26px;
+    line-height: 1.7;
+    color: #4B5563;
+
+    max-width: 600px;
+}
+
+/* MOBILE & SMALL SCREENS */
+@media (max-width: 768px) {
+
+    .workbox {
+        flex-direction: column;
+        padding: 30px 20px;
+        gap: 30px;
+        min-height: auto;
+    }
+
+    .codelaptop img {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        border-radius: 20px;
+    }
+
+    .worktext {
+        max-width: 100%;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .whatwedo {
+        font-size: 34px;
+        margin-bottom: 40px;
+    }
+}
+
+/* ===== PROJECT SECTION ===== */
+.projectbox {
+    padding: 4rem 2.5rem;
+    background-color: #020617;
+    color: #e5e7eb;
+}
+
+/* Header */
+.project-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.projecthead {
+    font-size: 2.4rem;
+    font-weight: 800;
+}
+
+.projectdesc {
+    margin-top: 0.6rem;
+    font-size: 1rem;
+    color: #94a3b8;
+}
+
+/* ===== PROJECT GRID ===== */
+.diffproject {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+}
+
+/* ===== PROJECT CARD ===== */
+.sampleblock {
+    background-color: #020617;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sampleblock:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);
+}
+
+/* Image */
+.sampleblock img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Text content */
+.project-info {
+    padding: 1.2rem;
+    flex-grow: 1;
+}
+
+.imgheading {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.sampleproject {
+    display: inline-block;
+    margin-top: 0.3rem;
+    font-size: 0.85rem;
+    color: #38bdf8;
+}
+
+.text {
+    margin-top: 0.6rem;
+    font-size: 0.95rem;
+    color: #cbd5f5;
+}
+
+/* Button / Link */
+.viewsite {
+    margin: 1.2rem;
+    padding: 0.7rem 1.4rem;
+    background-color: #38bdf8;
+    color: #020617;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.viewsite:hover {
+    background-color: #0ea5e9;
+    transform: scale(1.03);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 500px) {
+    .projecthead {
+        font-size: 2rem;
+    }
+
+    .sampleblock img {
+        height: 180px;
+    }
+}
+
+/* ===============================
+   WHY CHOOSE CODE & PIXEL
+================================ */
+
+/* Section wrapper */
+.reason {
+    margin-top: 50px;
+    padding: 0 2rem;
+}
+
+/* Section heading */
+.why {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin-bottom: 48px;
+}
+
+.why h2 {
+    font-size: 44px;
+    font-weight: 700;
+    color: #1A1A1A;
+    text-align: center;
+}
+
+/* Cards container */
+.reasonbox {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 2rem;
+    flex-wrap: wrap;
+    /* important for small screens */
+}
+
+/* Individual card */
+.reasonboxthree {
+    background-color: #ffffff;
+    width: 400px;
+    max-width: 100%;
+    min-height: 350px;
+
+    border: 3px solid #ffbf69;
+    border-radius: 20px;
+
+    margin-top: 50px;
+    padding: 2rem;
+
+    transition:
+        box-shadow 0.4s ease,
+        transform 0.4s ease;
+
+    animation: cardFadeUp 0.8s ease both;
+}
+
+/* Hover effect */
+.reasonboxthree:hover {
+    box-shadow:
+        0 25px 50px rgba(243, 112, 19, 0.35);
+    transform: translateY(-10px);
+}
+
+/* Stagger animation */
+.reasonboxthree:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.reasonboxthree:nth-child(2) {
+    animation-delay: 0.25s;
+}
+
+.reasonboxthree:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+/* Inner content */
+.symbol {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Icon */
+.symbol img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+/* Card heading */
+.reason-heading {
+    font-size: 24px;
+    font-weight: 500;
+    color: #1A1A1A;
+    margin-top: 30px;
+}
+
+/* Card text */
+.reason-summery {
+    font-size: 20px;
+    color: #6B7280;
+    margin-top: 20px;
+    padding: 0 10px;
+}
+
+/* ===============================
+   ANIMATION
+================================ */
+@keyframes cardFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 1024px) {
+    .why h2 {
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 768px) {
+    .why h2 {
+        font-size: 32px;
+    }
+
+    .reasonbox {
+        justify-content: center;
+    }
+
+    .reasonboxthree {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .why h2 {
+        font-size: 26px;
+    }
+
+    .reason-heading {
+        font-size: 20px;
+    }
+
+    .reason-summery {
+        font-size: 17px;
+    }
+}
+
+/* SECTION */
+.touch {
+    padding: 80px 8%;
+    background: #f6f6f6;
+    text-align: center;
+}
+
+/* HEADINGS */
+.getintouch {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.discuss {
+    color: #666;
+    margin-bottom: 60px;
+}
+
+/* ROW */
+.box-row {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* CARD */
+.detail-box {
+    width: 320px;
+    background: #fff;
+    padding: 35px 25px;
+    border-radius: 18px;
+    transition: 0.35s ease;
+    cursor: pointer;
+
+    box-shadow:
+        inset 6px 6px 14px rgba(0, 0, 0, 0.08),
+        inset -6px -6px 14px rgba(255, 255, 255, 0.9);
+}
+
+/* HOVER */
+.detail-box:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.18);
+}
+
+/* ICON */
+.logo img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+/* TEXT */
+.logo-heading {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.emaildetail {
+    font-size: 17px;
+}
+
+.contact-detail {
+    color: #666;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .detail-box {
+        width: 100%;
+        max-width: 380px;
+    }
+}
+
+/* ===== FOOTER ===== */
+.foot {
+    background-color: #111;
+    color: #f1f1f1;
+    padding: 50px 8% 25px;
+    text-align: center;
+}
+
+/* ===== COMPANY NAME (CENTERED) ===== */
+.company-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.company-logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: #ffbf69;
+}
+
+.com-name {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+/* ===== LINE BELOW LOGO + NAME ===== */
+.footer-summery {
+    font-size: 14px;
+    color: #b5b5b5;
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.footer-summery::after {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 2px;
+    background-color: #ffbf69;
+    margin: 15px auto 0;
+    border-radius: 10px;
+}
+
+/* ===== BOTTOM LINE ===== */
+.bottom-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 15px;
+    font-size: 13px;
+    color: #9ca3af;
+}
+
+.company-email {
+    word-break: break-word;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .bottom-line {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+}
