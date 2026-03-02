@@ -13,8 +13,8 @@
     <div class="navbar">
         <div class="logo">&lt;/&gt; Code & Pixel</div>
         <div class="projectCon">
-            <div id="project">Project</div>
-            <div id="contact">Contact</div>
+              <a href="#projects">Project</a>
+              <a href="#contact">Contact</a>
         </div>
     </div>
 
@@ -27,7 +27,9 @@
                 <p class="goal">
                     Clean, modern websites designed to help businesses look professional online.
                 </p>
-                <button class="viewproject">View Project</button>
+                <button class="viewproject" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">
+                    View Project
+                </button>
             </div>
         </div>
     </section>
@@ -134,7 +136,7 @@
         </div>
     </section>
 
-    <section class="touch">
+    <section class="touch"  id="contact">
         <h3 class="getintouch">Get In touch</h3>
         <p class="discuss">Get in touch to discuss your website.</p>
 
