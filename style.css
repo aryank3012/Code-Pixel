@@ -39,6 +39,8 @@ html {
     gap: 30px;
     text-decoration: none;
     font-weight: 500;
+    text-decoration: none;
+    color: black;
 }
 
 #project,
@@ -48,8 +50,6 @@ html {
     color: #111;
     cursor: pointer;
     position: relative;
-    color: black;
-    text-decoration: none;
 }
 
 /* UNDERLINE HOVER */
