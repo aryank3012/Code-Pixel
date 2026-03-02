@@ -38,7 +38,6 @@ html {
     display: flex;
     gap: 30px;
     text-decoration: none;
-    background-color: black;
     font-weight: 500;
 }
 
@@ -49,6 +48,7 @@ html {
     color: #111;
     cursor: pointer;
     position: relative;
+    background-color: black;
 }
 
 /* UNDERLINE HOVER */
@@ -142,7 +142,7 @@ section {
 .viewproject:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
-    background: orange:
+    background-color: orange;
 }
 
 /* ===== RESPONSIVE ===== */
