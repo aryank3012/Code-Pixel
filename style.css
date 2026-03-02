@@ -37,6 +37,9 @@ html {
 .projectCon {
     display: flex;
     gap: 30px;
+    text-decoration: none;
+    background-color: black;
+    font-weight: 500;
 }
 
 #project,
